@@ -1,0 +1,22 @@
+# Virtual environments
+**/.venv/
+**/venv/
+**/__pycache__/
+**/*.pyc
+
+# Node modules
+**/node_modules/
+
+# Logs
+*.log
+data/.webhook-debug.log
+data/.tasks-snapshot.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
