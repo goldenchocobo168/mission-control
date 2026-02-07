@@ -354,7 +354,13 @@
         }
       ],
       "priority": "high",
-      "comments": [],
+      "comments": [
+        {
+          "author": "Elon",
+          "text": "Hey Peter! While you're designing the survey, can you include a question about what story themes kids love most? This will help me design the content framework. Think: animals, space, magic, adventure? 🚀",
+          "timestamp": "2026-02-07T15:00:00Z"
+        }
+      ],
       "createdAt": "2026-02-06T23:40:00Z",
       "assignee": "peter"
     },
