@@ -6,16 +6,51 @@
       "description": "Welcome to Mission Control! Follow these steps to complete your setup. Work through each subtask in order.\n\n**Tip:** Click on a subtask to see detailed instructions. Check it off when done.",
       "status": "permanent",
       "project": "guides",
-      "tags": ["guide", "setup"],
+      "tags": [
+        "guide",
+        "setup"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "1. Enable GitHub Pages: Settings → Pages → Branch: main → Save", "done": false },
-        { "id": "sub_002", "title": "2. Create GitHub Token: github.com/settings/tokens → Generate (classic) → Scope: repo", "done": false },
-        { "id": "sub_003", "title": "3. Connect Dashboard: Open your GitHub Pages URL → Click 'Connect GitHub' → Paste token", "done": false },
-        { "id": "sub_004", "title": "4. Install Tailscale: brew install tailscale && tailscale up", "done": false },
-        { "id": "sub_005", "title": "5. Enable Funnel: tailscale funnel 18789 → Copy your URL", "done": false },
-        { "id": "sub_006", "title": "6. Generate Webhook Token: openssl rand -hex 32 → Save it", "done": false },
-        { "id": "sub_007", "title": "7. Add GitHub Webhook: Settings → Webhooks → Add → URL: https://YOUR-TAILSCALE-URL/hooks/github?token=YOUR-TOKEN", "done": false },
-        { "id": "sub_008", "title": "8. Test: Create a task, move to In Progress, verify MoltBot receives notification", "done": false }
+        {
+          "id": "sub_001",
+          "title": "1. Enable GitHub Pages: Settings → Pages → Branch: main → Save",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "2. Create GitHub Token: github.com/settings/tokens → Generate (classic) → Scope: repo",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "3. Connect Dashboard: Open your GitHub Pages URL → Click 'Connect GitHub' → Paste token",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "4. Install Tailscale: brew install tailscale && tailscale up",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "5. Enable Funnel: tailscale funnel 18789 → Copy your URL",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "6. Generate Webhook Token: openssl rand -hex 32 → Save it",
+          "done": "done"
+        },
+        {
+          "id": "sub_007",
+          "title": "7. Add GitHub Webhook: Settings → Webhooks → Add → URL: https://YOUR-TAILSCALE-URL/hooks/github?token=YOUR-TOKEN",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "8. Test: Create a task, move to In Progress, verify MoltBot receives notification",
+          "done": false
+        }
       ],
       "priority": "high",
       "comments": [
@@ -23,6 +58,11 @@
           "author": "Mission Control",
           "text": "Once all steps are complete, you can archive this guide or keep it as reference. Your setup is done when MoltBot responds to task changes!",
           "timestamp": "2026-01-01T00:00:00Z"
+        },
+        {
+          "author": "Mission Control",
+          "text": "🔐 Webhook Token Generated: 25734aa8b2629e5da7005c33b65118cd268442952a686a701527586a80434844",
+          "createdAt": "2026-02-07T13:56:00Z"
         }
       ],
       "createdAt": "2026-01-01T00:00:00Z"
@@ -33,41 +73,176 @@
       "description": "Learn how to use Mission Control effectively. Both you AND MoltBot can manage tasks!\n\n**Two ways to manage tasks:**\n• 👤 **You** — Use the Dashboard UI (drag & drop, buttons, forms)\n• 🤖 **MoltBot** — Uses CLI scripts or edits tasks.json directly",
       "status": "permanent",
       "project": "guides",
-      "tags": ["guide", "help"],
+      "tags": [
+        "guide",
+        "help"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "— THE BOARD —", "done": false },
-        { "id": "sub_002", "title": "Columns: Permanent (recurring) → Backlog → In Progress → Review → Done", "done": false },
-        { "id": "sub_003", "title": "Drag & Drop: Move tasks between columns to change status", "done": false },
-        { "id": "sub_004", "title": "Click task card to open details and edit", "done": false },
-        { "id": "sub_005", "title": "— CREATING TASKS —", "done": false },
-        { "id": "sub_006", "title": "👤 You: Click '+' button in any column header", "done": false },
-        { "id": "sub_007", "title": "🤖 MoltBot: Edits data/tasks.json or uses CLI", "done": false },
-        { "id": "sub_008", "title": "— TASK DETAILS —", "done": false },
-        { "id": "sub_009", "title": "Title: Short, clear name for the task", "done": false },
-        { "id": "sub_010", "title": "Description: Detailed instructions (Markdown supported)", "done": false },
-        { "id": "sub_011", "title": "Subtasks: Break work into smaller steps (checkable)", "done": false },
-        { "id": "sub_012", "title": "Comments: Add notes, feedback, or progress updates", "done": false },
-        { "id": "sub_013", "title": "Priority: High (🔴) / Medium (🟡) / Low (🟢)", "done": false },
-        { "id": "sub_014", "title": "Project: Organize tasks by project/category", "done": false },
-        { "id": "sub_015", "title": "— WORKFLOW WITH MOLTBOT —", "done": false },
-        { "id": "sub_016", "title": "1. Create task in Backlog with clear description", "done": false },
-        { "id": "sub_017", "title": "2. Move to 'In Progress' → MoltBot gets notified via webhook", "done": false },
-        { "id": "sub_018", "title": "3. MoltBot works on task, updates subtasks & adds comments", "done": false },
-        { "id": "sub_019", "title": "4. MoltBot moves to 'Review' when done", "done": false },
-        { "id": "sub_020", "title": "5. You review: Approve → Done, or add feedback → back to In Progress", "done": false },
-        { "id": "sub_021", "title": "— DASHBOARD FEATURES —", "done": false },
-        { "id": "sub_022", "title": "🔍 Search: Filter tasks by text", "done": false },
-        { "id": "sub_023", "title": "📁 Project filter: Click project buttons to filter", "done": false },
-        { "id": "sub_024", "title": "⚙️ Settings: Add/edit projects", "done": false },
-        { "id": "sub_025", "title": "📦 Archive: Store completed tasks out of sight", "done": false },
-        { "id": "sub_026", "title": "👥 Team: See repo collaborators (if public)", "done": false },
-        { "id": "sub_027", "title": "📚 Docs: Built-in documentation", "done": false },
-        { "id": "sub_028", "title": "— MOLTBOT CAPABILITIES —", "done": false },
-        { "id": "sub_029", "title": "🤖 Can CREATE tasks (via CLI or JSON)", "done": false },
-        { "id": "sub_030", "title": "🤖 Can UPDATE task status, subtasks, comments", "done": false },
-        { "id": "sub_031", "title": "🤖 Can MOVE tasks between columns", "done": false },
-        { "id": "sub_032", "title": "🤖 Can DELETE/archive tasks", "done": false },
-        { "id": "sub_033", "title": "🤖 Receives WEBHOOK when you move tasks to In Progress", "done": false }
+        {
+          "id": "sub_001",
+          "title": "— THE BOARD —",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Columns: Permanent (recurring) → Backlog → In Progress → Review → Done",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Drag & Drop: Move tasks between columns to change status",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Click task card to open details and edit",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "— CREATING TASKS —",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "👤 You: Click '+' button in any column header",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "🤖 MoltBot: Edits data/tasks.json or uses CLI",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "— TASK DETAILS —",
+          "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Title: Short, clear name for the task",
+          "done": false
+        },
+        {
+          "id": "sub_010",
+          "title": "Description: Detailed instructions (Markdown supported)",
+          "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Subtasks: Break work into smaller steps (checkable)",
+          "done": false
+        },
+        {
+          "id": "sub_012",
+          "title": "Comments: Add notes, feedback, or progress updates",
+          "done": false
+        },
+        {
+          "id": "sub_013",
+          "title": "Priority: High (🔴) / Medium (🟡) / Low (🟢)",
+          "done": false
+        },
+        {
+          "id": "sub_014",
+          "title": "Project: Organize tasks by project/category",
+          "done": false
+        },
+        {
+          "id": "sub_015",
+          "title": "— WORKFLOW WITH MOLTBOT —",
+          "done": false
+        },
+        {
+          "id": "sub_016",
+          "title": "1. Create task in Backlog with clear description",
+          "done": false
+        },
+        {
+          "id": "sub_017",
+          "title": "2. Move to 'In Progress' → MoltBot gets notified via webhook",
+          "done": false
+        },
+        {
+          "id": "sub_018",
+          "title": "3. MoltBot works on task, updates subtasks & adds comments",
+          "done": false
+        },
+        {
+          "id": "sub_019",
+          "title": "4. MoltBot moves to 'Review' when done",
+          "done": false
+        },
+        {
+          "id": "sub_020",
+          "title": "5. You review: Approve → Done, or add feedback → back to In Progress",
+          "done": false
+        },
+        {
+          "id": "sub_021",
+          "title": "— DASHBOARD FEATURES —",
+          "done": false
+        },
+        {
+          "id": "sub_022",
+          "title": "🔍 Search: Filter tasks by text",
+          "done": false
+        },
+        {
+          "id": "sub_023",
+          "title": "📁 Project filter: Click project buttons to filter",
+          "done": false
+        },
+        {
+          "id": "sub_024",
+          "title": "⚙️ Settings: Add/edit projects",
+          "done": false
+        },
+        {
+          "id": "sub_025",
+          "title": "📦 Archive: Store completed tasks out of sight",
+          "done": false
+        },
+        {
+          "id": "sub_026",
+          "title": "👥 Team: See repo collaborators (if public)",
+          "done": false
+        },
+        {
+          "id": "sub_027",
+          "title": "📚 Docs: Built-in documentation",
+          "done": false
+        },
+        {
+          "id": "sub_028",
+          "title": "— MOLTBOT CAPABILITIES —",
+          "done": false
+        },
+        {
+          "id": "sub_029",
+          "title": "🤖 Can CREATE tasks (via CLI or JSON)",
+          "done": false
+        },
+        {
+          "id": "sub_030",
+          "title": "🤖 Can UPDATE task status, subtasks, comments",
+          "done": false
+        },
+        {
+          "id": "sub_031",
+          "title": "🤖 Can MOVE tasks between columns",
+          "done": false
+        },
+        {
+          "id": "sub_032",
+          "title": "🤖 Can DELETE/archive tasks",
+          "done": false
+        },
+        {
+          "id": "sub_033",
+          "title": "🤖 Receives WEBHOOK when you move tasks to In Progress",
+          "done": false
+        }
       ],
       "priority": "medium",
       "comments": [
@@ -85,11 +260,25 @@
       "description": "This is an example of what a real task looks like. Feel free to edit or delete it.\n\n**Good task descriptions include:**\n- What needs to be done\n- Why it matters\n- Any constraints or requirements\n- Links to relevant resources",
       "status": "backlog",
       "project": "default",
-      "tags": ["example"],
+      "tags": [
+        "example"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "First step of the task", "done": false },
-        { "id": "sub_002", "title": "Second step", "done": false },
-        { "id": "sub_003", "title": "Final step", "done": false }
+        {
+          "id": "sub_001",
+          "title": "First step of the task",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Second step",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Final step",
+          "done": false
+        }
       ],
       "priority": "low",
       "comments": [],
@@ -101,19 +290,68 @@
       "description": "Design and distribute the parent spelling survey to validate market demand in Singapore. Focus on systematic, data-driven approach.\n\n**Objectives:**\n- Get 50+ responses from Singapore parents with kids aged 4-7\n- Validate problem existence (80%+ rate spelling as challenging)\n- Test willingness to try story-based approach (60%+)\n- Confirm pricing viability (40%+ willing to pay >$5/month)\n\n**Distribution Channels:**\n- WhatsApp groups (5-10 parent communities)\n- Facebook groups (Singapore Parenting, MOE support)\n- Personal network (10-15 parents)\n- Social media (Instagram/TikTok demo videos)\n\n**Deliverable:** Complete Google Form with analytics summary showing validation metrics",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["research", "validation", "survey", "peter"],
+      "tags": [
+        "research",
+        "validation",
+        "survey",
+        "peter"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Review and refine survey questions from existing template", "done": false },
-        { "id": "sub_002", "title": "Create Google Form with clear structure (sections 1-6)", "done": false },
-        { "id": "sub_003", "title": "Draft WhatsApp group promotion message", "done": false },
-        { "id": "sub_004", "title": "Draft Instagram/TikTok caption for social media distribution", "done": false },
-        { "id": "sub_005", "title": "Share on 5 WhatsApp parent groups", "done": false },
-        { "id": "sub_006", "title": "Post on 2-3 Facebook groups", "done": false },
-        { "id": "sub_007", "title": "Send to 10-15 personal network parents", "done": false },
-        { "id": "sub_008", "title": "Create and post 1-2 demo videos for social media", "done": false },
-        { "id": "sub_009", "title": "Analyze responses: document key metrics (target vs actual)", "done": false },
-        { "id": "sub_010", "title": "Identify validation signals and risks", "done": false },
-        { "id": "sub_011", "title": "Write summary report with actionable insights", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Review and refine survey questions from existing template",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Create Google Form with clear structure (sections 1-6)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Draft WhatsApp group promotion message",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Draft Instagram/TikTok caption for social media distribution",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Share on 5 WhatsApp parent groups",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Post on 2-3 Facebook groups",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Send to 10-15 personal network parents",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Create and post 1-2 demo videos for social media",
+          "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Analyze responses: document key metrics (target vs actual)",
+          "done": false
+        },
+        {
+          "id": "sub_010",
+          "title": "Identify validation signals and risks",
+          "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Write summary report with actionable insights",
+          "done": false
+        }
       ],
       "priority": "high",
       "comments": [],
@@ -126,16 +364,53 @@
       "description": "Design the core story-based learning framework. Think big, unconventional, and memorable. Challenge traditional memorization methods.\n\n**Challenge:** Traditional spelling apps use repetition, flashcards, and rote memorization. Kids hate it, parents get frustrated.\n\n**Opportunity:** Story-based learning activates imagination, creates emotional connections, and builds mnemonics naturally.\n\n**Questions to answer:**\n- What makes a spelling story memorable?\n- How do we scale from 10 words to 1000 words?\n- Can we use AI to generate infinite personalized stories?\n- What's the minimum viable story that demonstrates value?\n- How do we compete with boring but effective methods?\n\n**Deliverable:** Story framework documentation with 5 example stories demonstrating the approach",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["content", "creativity", "storytelling", "elon"],
+      "tags": [
+        "content",
+        "creativity",
+        "storytelling",
+        "elon"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Analyze what makes traditional spelling methods fail for kids", "done": false },
-        { "id": "sub_002", "title": "Brainstorm story elements that enhance memory (visuals, emotions, absurdity)", "done": false },
-        { "id": "sub_003", "title": "Design story template structure (setup → conflict → resolution)", "done": false },
-        { "id": "sub_004", "title": "Create 5 example stories for common words (CAT, DOG, BOOK, etc.)", "done": false },
-        { "id": "sub_005", "title": "Define scaling strategy: how to generate stories for 100+ words", "done": false },
-        { "id": "sub_006", "title": "Consider AI automation: can GPT generate personalized stories?", "done": false },
-        { "id": "sub_007", "title": "Identify MVP features vs. nice-to-have", "done": false },
-        { "id": "sub_008", "title": "Document framework with clear examples and guidelines", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Analyze what makes traditional spelling methods fail for kids",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Brainstorm story elements that enhance memory (visuals, emotions, absurdity)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Design story template structure (setup → conflict → resolution)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Create 5 example stories for common words (CAT, DOG, BOOK, etc.)",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Define scaling strategy: how to generate stories for 100+ words",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Consider AI automation: can GPT generate personalized stories?",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Identify MVP features vs. nice-to-have",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Document framework with clear examples and guidelines",
+          "done": false
+        }
       ],
       "priority": "high",
       "comments": [],
@@ -148,16 +423,52 @@
       "description": "Define the minimum viable product features based on survey results and story framework. Balance Peter's systematic approach with Elon's bold vision.\n\n**Inputs:**\n- Peter's survey results (what parents actually want)\n- Elon's story framework (what makes the approach work)\n- Technical constraints (what we can build)\n- Timeline (when do we need results)\n\n**Deliverable:** Feature specification document with:\n- Core features (must-have for launch)\n- Nice-to-have features (can add later)\n- Technical feasibility notes\n- Development timeline estimate\n- Success metrics for each feature",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["product", "planning", "collaboration"],
+      "tags": [
+        "product",
+        "planning",
+        "collaboration"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Peter: Review survey results and identify top 3 feature priorities", "done": false },
-        { "id": "sub_002", "title": "Elon: Review story framework and identify technical bottlenecks", "done": false },
-        { "id": "sub_003", "title": "Collaborate: Align on core MVP features (maximum 5 features)", "done": false },
-        { "id": "sub_004", "title": "Peter: Document each feature with user story format", "done": false },
-        { "id": "sub_005", "title": "Elon: Add technical feasibility and innovation notes", "done": false },
-        { "id": "sub_006", "title": "Together: Prioritize features by impact vs. effort", "done": false },
-        { "id": "sub_007", "title": "Document success metrics for MVP launch", "done": false },
-        { "id": "sub_008", "title": "Create rough development timeline", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Peter: Review survey results and identify top 3 feature priorities",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Elon: Review story framework and identify technical bottlenecks",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Collaborate: Align on core MVP features (maximum 5 features)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Peter: Document each feature with user story format",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Elon: Add technical feasibility and innovation notes",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Together: Prioritize features by impact vs. effort",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Document success metrics for MVP launch",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Create rough development timeline",
+          "done": false
+        }
       ],
       "priority": "high",
       "comments": [],
@@ -170,15 +481,48 @@
       "description": "Design the go-to-market strategy and validation plan. Think systematically: who, what, where, how much.\n\n**Questions to answer:**\n- Who is the early adopter? (beyond just \"parents\")\n- How do we reach them effectively? (channels, messaging)\n- What's the conversion funnel from awareness → trial → paid?\n- How do we measure success? (metrics, benchmarks)\n- What's the pricing strategy? (freemium, trial, subscription)\n\n**Deliverable:** GTM strategy document with:\n- Target persona description\n- Channel strategy with estimated reach\n- Conversion funnel with metrics\n- Pricing model with rationale\n- A/B test ideas for optimization",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["marketing", "strategy", "validation", "peter"],
+      "tags": [
+        "marketing",
+        "strategy",
+        "validation",
+        "peter"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Analyze survey responses to identify ideal early adopter", "done": false },
-        { "id": "sub_002", "title": "Map customer journey from problem awareness to solution adoption", "done": false },
-        { "id": "sub_003", "title": "Research competitor pricing and positioning", "done": false },
-        { "id": "sub_004", "title": "Define pricing model (freemium, trial, subscription)", "done": false },
-        { "id": "sub_005", "title": "Design conversion funnel with success metrics at each stage", "done": false },
-        { "id": "sub_006", "title": "Create A/B test hypotheses (messaging, pricing, features)", "done": false },
-        { "id": "sub_007", "title": "Document go-to-market strategy with timeline", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Analyze survey responses to identify ideal early adopter",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Map customer journey from problem awareness to solution adoption",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Research competitor pricing and positioning",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Define pricing model (freemium, trial, subscription)",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Design conversion funnel with success metrics at each stage",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Create A/B test hypotheses (messaging, pricing, features)",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Document go-to-market strategy with timeline",
+          "done": false
+        }
       ],
       "priority": "medium",
       "comments": [],
@@ -191,16 +535,53 @@
       "description": "Think beyond the MVP. If this works, what's the 10x version? How do we scale to 10,000 users? 100,000?\n\n**Questions to answer:**\n- What happens after Singapore? (regional expansion, global?)\n- How do we handle personalization at scale? (AI, templates, crowdsourcing?)\n- What's the revenue model at scale? (subscription, marketplace, licensing?)\n- Can we expand beyond spelling? (math, science, languages?)\n- What's the acquisition channel that scales?\n- What's the 10-year vision for this company?\n\n**Deliverable:** Scaling plan document with:\n- Phased expansion roadmap (Phase 1-5)\n- Revenue projections at each phase\n- Technical scaling challenges and solutions\n- Long-term vision statement",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["scaling", "vision", "monetization", "elon"],
+      "tags": [
+        "scaling",
+        "vision",
+        "monetization",
+        "elon"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Define expansion phases (Singapore → Southeast Asia → Global)", "done": false },
-        { "id": "sub_002", "title": "Model revenue growth at each phase (users x pricing x churn)", "done": false },
-        { "id": "sub_003", "title": "Identify scaling bottlenecks (content, localization, support)", "done": false },
-        { "id": "sub_004", "title": "Explore product expansion (math, science, language learning)", "done": false },
-        { "id": "sub_005", "title": "Define acquisition channels that scale beyond personal networks", "done": false },
-        { "id": "sub_006", "title": "Consider ecosystem plays (schools, partnerships, licensing)", "done": false },
-        { "id": "sub_007", "title": "Write 10-year vision statement with milestones", "done": false },
-        { "id": "sub_008", "title": "Document risk factors and contingency plans", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Define expansion phases (Singapore → Southeast Asia → Global)",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Model revenue growth at each phase (users x pricing x churn)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Identify scaling bottlenecks (content, localization, support)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Explore product expansion (math, science, language learning)",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Define acquisition channels that scale beyond personal networks",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Consider ecosystem plays (schools, partnerships, licensing)",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Write 10-year vision statement with milestones",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Document risk factors and contingency plans",
+          "done": false
+        }
       ],
       "priority": "medium",
       "comments": [],
@@ -213,16 +594,53 @@
       "description": "Create systems, templates, and documentation so the project can run smoothly and scale. Make it repeatable.\n\n**Deliverables:**\n- Project documentation (overview, goals, timeline)\n- Process templates (survey creation, story writing, etc.)\n- Communication flows (how elon and peter coordinate)\n- Knowledge base (lessons learned, best practices)\n- Automation scripts (if any repetitive tasks)\n\n**Why this matters:** Good systems prevent rework, enable onboarding, and create leverage. Build it once, use it forever.",
       "status": "backlog",
       "project": "spelling-helper",
-      "tags": ["documentation", "processes", "systems", "peter"],
+      "tags": [
+        "documentation",
+        "processes",
+        "systems",
+        "peter"
+      ],
       "subtasks": [
-        { "id": "sub_001", "title": "Create project overview document (goals, timeline, stakeholders)", "done": false },
-        { "id": "sub_002", "title": "Document survey creation process from lessons learned", "done": false },
-        { "id": "sub_003", "title": "Document story writing process and templates", "done": false },
-        { "id": "sub_004", "title": "Create communication template for elon-peter coordination", "done": false },
-        { "id": "sub_005", "title": "Set up knowledge base structure (Google Docs, Notion, etc.)", "done": false },
-        { "id": "sub_006", "title": "Document Mission Control workflow for task management", "done": false },
-        { "id": "sub_007", "title": "Create weekly check-in template for progress review", "done": false },
-        { "id": "sub_008", "title": "Identify automation opportunities and scripts", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Create project overview document (goals, timeline, stakeholders)",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Document survey creation process from lessons learned",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Document story writing process and templates",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Create communication template for elon-peter coordination",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Set up knowledge base structure (Google Docs, Notion, etc.)",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Document Mission Control workflow for task management",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Create weekly check-in template for progress review",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Identify automation opportunities and scripts",
+          "done": false
+        }
       ],
       "priority": "low",
       "comments": [],
@@ -231,19 +649,74 @@
     }
   ],
   "projects": [
-    { "id": "guides", "name": "Guides", "color": "#10b981", "icon": "📚" },
-    { "id": "default", "name": "My Project", "color": "#3b82f6", "icon": "📁" },
-    { "id": "spelling-helper", "name": "Spelling Helper", "color": "#8b5cf6", "icon": "📝" }
+    {
+      "id": "guides",
+      "name": "Guides",
+      "color": "#10b981",
+      "icon": "📚"
+    },
+    {
+      "id": "default",
+      "name": "My Project",
+      "color": "#3b82f6",
+      "icon": "📁"
+    },
+    {
+      "id": "spelling-helper",
+      "name": "Spelling Helper",
+      "color": "#8b5cf6",
+      "icon": "📝"
+    }
   ],
   "activities": [
-    { "type": "created", "actor": "Mission Control", "task": "Onboarding Guide", "time": "just now" },
-    { "type": "created", "actor": "Mission Control", "task": "User Guide", "time": "just now" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "Survey Design & Distribution", "time": "2026-02-06T23:40:00Z" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "Story Content Framework", "time": "2026-02-06T23:40:00Z" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "MVP Feature Definition", "time": "2026-02-06T23:40:00Z" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "Market Validation Strategy", "time": "2026-02-06T23:40:00Z" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "Scaling & Monetization Plan", "time": "2026-02-06T23:40:00Z" },
-    { "type": "created", "actor": "Golden Chocobo", "task": "Documentation & Processes", "time": "2026-02-06T23:40:00Z" }
+    {
+      "type": "created",
+      "actor": "Mission Control",
+      "task": "Onboarding Guide",
+      "time": "just now"
+    },
+    {
+      "type": "created",
+      "actor": "Mission Control",
+      "task": "User Guide",
+      "time": "just now"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "Survey Design & Distribution",
+      "time": "2026-02-06T23:40:00Z"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "Story Content Framework",
+      "time": "2026-02-06T23:40:00Z"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "MVP Feature Definition",
+      "time": "2026-02-06T23:40:00Z"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "Market Validation Strategy",
+      "time": "2026-02-06T23:40:00Z"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "Scaling & Monetization Plan",
+      "time": "2026-02-06T23:40:00Z"
+    },
+    {
+      "type": "created",
+      "actor": "Golden Chocobo",
+      "task": "Documentation & Processes",
+      "time": "2026-02-06T23:40:00Z"
+    }
   ],
   "lastUpdated": "2026-02-06T23:40:00Z"
 }
